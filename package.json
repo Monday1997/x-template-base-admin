@@ -12,6 +12,7 @@
         "lint": "eslint  --cache --fix  --ext .js,.ts,.vue,.jsx,.tsx src --rule \"simple-import-sort/imports: off\" --rule \"simple-import-sort/exports: off\"",
         "lint:style": "npx stylelint --cache \"src/**/*.{js,jsx,vue,less,scss,css}\" --fix",
         "format": "prettier --write src/",
+        "lint:fn": "npx fs-lint --config fnlint.json",
         "lint:all": "npm run lint && npm run lint:style && npm run lint:fn"
     },
     "dependencies": {
@@ -32,6 +33,7 @@
         "eslint-plugin-prettier": "^5.5.1",
         "eslint-plugin-simple-import-sort": "^12.1.1",
         "eslint-plugin-vue": "~10.2.0",
+        "fs-lint": "^1.0.1",
         "jiti": "^2.4.2",
         "npm-run-all2": "^8.0.4",
         "postcss-html": "^1.8.0",
