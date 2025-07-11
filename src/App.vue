@@ -3,8 +3,6 @@ import {
   RouterLink, RouterView
 } from 'vue-router'
 
-import helloworld from './components/HelloWorld.vue'
-
 
 </script>
 

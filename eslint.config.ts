@@ -20,7 +20,16 @@ export default defineConfigWithVueTs(
       "simple-import-sort": simpleImportSort,
     },
     rules: {
-      "simple-import-sort/imports": "warn",
+      "simple-import-sort/imports": [
+        "warn", {
+          groups: [
+            ['^\\u0000'],
+            ['^node:', '^vue', '^ant-design-vue', '^@ant-design', '^@?\\w'],
+            ['^'],// component那些
+            ['^\\.'],
+          ],
+        },
+      ],
       "simple-import-sort/exports": "warn",
     },
   },
